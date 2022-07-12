@@ -1,0 +1,20 @@
+in_file: "" # absolute path to output destination of parquet or csv file
+
+output_dir: "" # absolute path to output destination
+
+project_name: "COSME"
+
+out_name: "MarRef_species_k_1"
+
+label_col_name: "label"
+input_col_name: "seq"
+
+# add validation to make this 0 - 12
+k_mer: 1 # must be an integer in the range 0-12
+
+possible_gene_values: ["A", "C", "G", "T"]
+max_seq_len: 150
+
+CUDA_VISIBLE_DEVICES: '0'
+do_cuda_vis_dev: false # set to true if you only want to use 1 GPU (set by CUDA_VISIBLE_DEVICES)
+partition_size: '100M'

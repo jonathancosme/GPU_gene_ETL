@@ -1,0 +1,18 @@
+train_data_path: '/media/jcosme/bigdata/COSME/MarRef_species_k_1_train.parquet'
+val_data_path: '/media/jcosme/bigdata/COSME/MarRef_species_k_1_val.parquet'
+test_data_path: '/media/jcosme/bigdata/COSME/MarRef_species_k_1_test.parquet'
+unique_classes_data_path: '/media/jcosme/bigdata/COSME/MarRef_species_unq_labs.csv'
+rand_seed: 42
+do_rand_seed: true
+tgt_col: 'label'
+inp_col: 'seq'
+do_unknown_class: true
+name_for_unknown_class: '_UNKOWN_'
+train_data_split: 0.84
+val_data_split: 0.08
+test_data_split: 0.08
+project_name: 'COSME'
+output_data_path: '/media/jcosme/bigdata/COSME/datasets'
+CUDA_VISIBLE_DEVICES: '0'
+do_cuda_vis_dev: false # set to true if you only want to use 1 GPU (set by CUDA_VISIBLE_DEVICES)
+partition_size: '100M' 

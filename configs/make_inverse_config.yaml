@@ -1,0 +1,9 @@
+in_dir: "/home/jovyan/work/projects/COSME/configs/make_data_splits_config.yaml" # absolute path to output destination of parquet or csv file
+
+out_dir: "/media/jcosme/bigdata/COSME/splits_inverse" # absolute path to output destination
+
+inverse_col: 'seq'
+
+CUDA_VISIBLE_DEVICES: '0'
+do_cuda_vis_dev: false # set to true if you only want to use 1 GPU (set by CUDA_VISIBLE_DEVICES)
+partition_size: '100M'

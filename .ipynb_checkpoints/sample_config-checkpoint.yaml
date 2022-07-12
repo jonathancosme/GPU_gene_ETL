@@ -1,0 +1,26 @@
+input_data_path: '/media/jcosme/bigdata/MarRef_species.parquet'
+unique_classes_data_path: '/media/jcosme/bigdata/MarRef_species_classes.csv' # 
+
+number_of_classes: 16 # the number of classes to randomly select
+size_per_class: 8000 # the number of training examples to randomly select per class
+
+rand_seed: 42 # default is 42
+do_rand_seed: true # default is true
+
+tgt_col: 'label' # column name of the labels in df
+inp_col: 'seq' # column name of the inputs in df
+
+do_unknown_class: true # default is True
+name_for_unknown_class: '_UNKOWN_' # default is _UNKOWN_
+
+cur_data_split: 'train' # either 'train' 'val' or 'test'
+train_data_split: 0.94 # proportion of data to use for training
+val_data_split: 0.07 # proportion of data to use for validation
+test_data_split: 0.07 # proportion of data to use for testing
+
+project_name: 'COSME' # string
+
+output_data_path: '/media/jcosme/bigdata/COSME' # string
+
+CUDA_VISIBLE_DEVICES: '0'
+do_cuda_vis_dev: true

@@ -1,0 +1,13 @@
+in_file: "/media/jcosme/bigdata/MarRef.training.fasta" # absolute path to location of raw .fasta file
+
+out_file: "/media/jcosme/bigdata/MarRef.parquet" # absolute path to output destination of parquet files (this will be a folder)
+
+# add validation to make this a length = 2 list
+# add validation to make sure these three variables make sense
+base_col_names: ["seq", "label"]
+
+fasta_sep: ">" # DO NOT TOUCH THIS
+
+CUDA_VISIBLE_DEVICES: '0'
+do_cuda_vis_dev: false # set to true if you only want to use 1 GPU (set by CUDA_VISIBLE_DEVICES)
+partition_size: '100M' # partition size for dask dataframes. default is '100M'

@@ -1,0 +1,15 @@
+in_file: "/media/jcosme/bigdata/COSME/MarRef_species_k_1.parquet" # absolute path to output destination of parquet or csv file
+
+out_dir: "/media/jcosme/bigdata/COSME/splits" # absolute path to output destination
+
+splits:
+    train: 0.84
+    val: 0.08
+    test: 0.08
+
+rand_seed: 42 # default is 42
+do_rand_seed: true # default is true
+
+CUDA_VISIBLE_DEVICES: '0'
+do_cuda_vis_dev: false # set to true if you only want to use 1 GPU (set by CUDA_VISIBLE_DEVICES)
+partition_size: '100M'

@@ -1,0 +1,13 @@
+in_file: "/media/jcosme/bigdata/MarRef.parquet" # absolute path to output destination of parquet or csv file
+
+out_file: "/media/jcosme/bigdata/MarRef_species.parquet" # absolute path to output destination
+
+unq_label_out_file: "/media/jcosme/bigdata/MarRef_species_labels.parquet"
+
+label_col_name: "label"
+
+label_regex: "(?:[^a-zA-Z0-9]+)([a-zA-Z]+[0-9]+)(?:[^a-zA-Z0-9]+)" # regular expression used to extract species labels
+
+CUDA_VISIBLE_DEVICES: '0'
+do_cuda_vis_dev: false # set to true if you only want to use 1 GPU (set by CUDA_VISIBLE_DEVICES)
+partition_size: '100M'

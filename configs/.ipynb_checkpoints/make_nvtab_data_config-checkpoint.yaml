@@ -1,0 +1,8 @@
+in_dir: "/media/jcosme/bigdata/COSME/MarRef_species_k_1.parquet"
+out_dir: "/media/jcosme/bigdata/COSME/MarRef_species_k_1.parquet"
+label_col_name: 'label'
+input_col_name: 'seq'
+max_seq_len: 150
+row_group_size: 10000
+CUDA_VISIBLE_DEVICES: '0'
+do_cuda_vis_dev: false # set to true if you only want to use 1 GPU (set by CUDA_VISIBLE_DEVICES)
