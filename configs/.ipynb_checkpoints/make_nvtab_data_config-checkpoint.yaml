@@ -1,5 +1,5 @@
-in_dir: "/media/jcosme/bigdata/COSME/MarRef_species_k_1.parquet"
-out_dir: "/media/jcosme/bigdata/COSME/MarRef_species_k_1.parquet"
+out_base_dir: 'gs://jcosme/clean_data/genomics/nvtab_datasets'
+dmake_file: '/home/jovyan/work/projects/GPU_gene_ETL/configs/make_dataset_config.yaml'
 label_col_name: 'label'
 input_col_name: 'seq'
 max_seq_len: 150

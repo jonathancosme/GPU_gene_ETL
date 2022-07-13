@@ -1,6 +1,8 @@
-in_dir: "/home/jovyan/work/projects/COSME/configs/make_data_splits_config.yaml" # absolute path to output destination of parquet or csv file
+in_dir: 'gs://jcosme/clean_data/genomics/data_splits_inverse' # absolute path to output destination of parquet or csv file
 
-out_dir: "/media/jcosme/bigdata/COSME/MarRef_species_k_1.parquet" # absolute path to output destination
+out_dir: 'gs://jcosme/clean_data/genomics/data_splits_inverse_1_mer' # absolute path to output destination
+
+dsplit_file: '/home/jovyan/work/projects/GPU_gene_ETL/configs/make_data_splits_config.yaml'
 
 label_col_name: "label"
 input_col_name: "seq"

@@ -1,10 +1,11 @@
-in_file: "/media/jcosme/bigdata/MarRef.training.fasta" # absolute path to location of raw .fasta file
+in_file: 'gs://jcosme/raw_data/genomics/MarRef.training.fasta' # absolute path to location of raw .fasta file
 
-out_file: "/media/jcosme/bigdata/MarRef.parquet" # absolute path to output destination of parquet files (this will be a folder)
+out_file: 'gs://jcosme/clean_data/genomics/MarRef_training.parquet' # absolute path to output destination of parquet files (this will be a folder)
 
 # add validation to make this a length = 2 list
 # add validation to make sure these three variables make sense
 base_col_names: ["seq", "label"]
+label_col_name: "label"
 
 fasta_sep: ">" # DO NOT TOUCH THIS
 

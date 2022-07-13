@@ -1,21 +1,20 @@
-in_dir: "/media/jcosme/bigdata/COSME/MarRef_species_k_1.parquet"
+in_dir: 'gs://jcosme/clean_data/genomics/data_splits_inverse_1_mer'
 
-in_data_splits_config_file: "/home/jovyan/work/projects/COSME/configs/make_data_splits_config.yaml" # absolute path to output destination of parquet or csv file
-out_dir: "/media/jcosme/bigdata/COSME/MarRef_species_k_1.parquet"
+out_base_dir: 'gs://jcosme/clean_data/genomics/datasets'
 
-unique_classes_data_path: '/media/jcosme/bigdata/MarRef_species_unq_labs.csv' # 
+dsplit_file: '/home/jovyan/work/projects/GPU_gene_ETL/configs/make_data_splits_config.yaml'
 
-number_of_classes: 16 # the number of classes to randomly select
-size_per_class: 8000 # the number of training examples to randomly select per class
+unq_classes_file: 'gs://jcosme/clean_data/genomics/MarRef_species_unq.parquet' # 
+
+numbers_of_classes: [1, 2, 4, 8, 16] # the number of classes to randomly select
+sizes_per_class: [500, 1000, 2000, 4000] # the number of training examples to randomly select per class
+do_unknown_class: true # default is True
+name_for_unknown_class: '_UNKOWN_' # default is _UNKOWN_
 
 rand_seed: 42 # default is 42
 do_rand_seed: true # default is true
-
 tgt_col: 'label' # column name of the labels in df
 inp_col: 'seq' # column name of the inputs in df
-
-do_unknown_class: true # default is True
-name_for_unknown_class: '_UNKOWN_' # default is _UNKOWN_
 
 CUDA_VISIBLE_DEVICES: '0'
 do_cuda_vis_dev: false

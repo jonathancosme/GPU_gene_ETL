@@ -1,8 +1,8 @@
-in_file: "/media/jcosme/bigdata/MarRef.parquet" # absolute path to output destination of parquet or csv file
+in_file: 'gs://jcosme/clean_data/genomics/MarRef_inverse_rm.parquet' # absolute path to output destination of parquet or csv file
 
-out_file: "/media/jcosme/bigdata/MarRef_species.parquet" # absolute path to output destination
+out_file: 'gs://jcosme/clean_data/genomics/MarRef_species.parquet' # absolute path to output destination
 
-unq_label_out_file: "/media/jcosme/bigdata/MarRef_species_labels.parquet"
+unq_label_out_file: "gs://jcosme/clean_data/genomics/MarRef_species_unq.parquet"
 
 label_col_name: "label"
 
